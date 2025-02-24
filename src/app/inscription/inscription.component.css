@@ -1,0 +1,287 @@
+/* tout ce qui touche au css du nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(92, 123, 201);
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.recherche {
+  margin-top: -47px;
+  margin-left: 750px;
+  position: relative;
+}
+
+input {
+  width: 450px;
+}
+
+.fa-magnifying-glass {
+  right: 0.5em;
+  position: absolute;
+  bottom: 0.5em;
+}
+
+.paragraphe {
+  color: white;
+  margin-top: 12px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+#inscrit {
+  background-color: black;
+  color: white;
+  margin-left: 1em;
+  border-radius: 0.5em;
+  width: 150px;
+  height: 38px;
+}
+#inscrit:hover {
+  background-color: white;
+  color: black;
+}
+
+#connect {
+  background-color: rgb(195, 195, 248);
+  border-radius: 0.5em;
+  width: 150px;
+  height: 38px;
+}
+
+#connect:hover {
+  background-color: white;
+}
+
+
+/* tout ce qui touche au css du aside */
+aside {
+  display: table;
+  border: 3px;
+  height: 900px;
+  width: 206px;
+  background-color: rgb(236, 243, 250);
+  position: fixed;
+  top: 52px;
+}
+
+li {
+  display: table;
+  border: 2px;
+  position: relative;
+  float: none;
+  padding: 4px;
+}
+
+.liste span{
+  margin-left: 17px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(14, 14, 56);
+}
+
+li:hover {
+  background-color: white;
+}
+
+/* tout ce qui touche au css du main */
+section {
+  background-image: url(/assets/images/fret.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2020px;
+  height: 650px;
+  top: 80px;
+  right: 27px;
+  position: absolute;
+}
+
+.textAlt {
+  margin-top: 150px;
+  justify-content: center;
+}
+
+.textAlt h5,p{
+  margin-top: 20px;
+}
+
+.cont {
+  background-color: white;
+  width: 525px;
+  height: 500px;
+  text-align:center;
+  margin-left: 350px;
+  margin-top: -90px;
+  box-shadow: 5px 3px rgba(37, 26, 248, 0.1);
+}
+
+h5,
+h2,
+p,
+button {
+  margin-left: 20px;
+  padding: 2px;
+}
+
+.envoyer{
+  width: 480px;
+  margin-top: -5px;
+  border-radius: 5px;
+  height: 40px;
+  background-color: rgb(77, 77, 243);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.envoyer:hover{
+ background-color: rgb(6, 6, 49);
+ color: white;
+}
+
+.annuler{
+  width: 480px;
+  height: 40px;
+  margin-top: 2px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(76, 76, 237);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.annuler:hover{
+  color: black;
+ }
+.bouton{
+  font-size: 18px;
+}
+
+.fa-house {
+  margin-top: 40px;
+}
+
+.pass {
+  margin-top: 300px;
+}
+
+.content {
+  display: flex;
+  gap: 45px;
+  margin-left: 250px;
+  margin-top: 750px;
+}
+
+.one,
+.two,
+.three {
+  border: 3px solid white;
+  background-color: rgb(229, 233, 246);
+  height: 220px;
+  margin-left: -18px;
+  width: 424px;
+  font-size: 16px;
+}
+
+span {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.content button {
+  border-radius: 6px;
+  border-color: rgb(117, 146, 243);
+  width: 250px;
+  height: 40px;
+  color: rgb(38, 92, 227);
+}
+
+.content button:hover {
+  color: black;
+}
+
+.content p{
+  margin-top: 20px;
+}
+.three button {
+  width: 300px;
+}
+
+.span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  margin-right: 26px;
+  margin-top: 10px;
+}
+
+#un,
+#deux,
+#trois {
+  position: relative;
+  left: 270px;
+  bottom: -5px;
+  font-size: 28px;
+  color: rgb(158, 158, 250);
+}
+
+.content span{
+  color: rgb(28, 28, 127);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+hr {
+  width: 83.3%;
+  margin-left: 235px;
+  margin-top: 20px;
+}
+
+/* tout ce qui touche au css du footer */
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 212px;
+  font-size: 15px;
+  margin-top: -15px;
+  height:0 ;
+  color: blue;
+}
+
+.dernier {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 29px;
+  font-size: 14px;
+  color: blue;
+}
+
+.para p{
+  margin-bottom: 70px;
+}
+
+/* tout ce qui touche à la responsivité */
+@media screen and (max-width: 320px){
+#mainNav #mainSection{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+section {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  width: 2020px;
+  height: 650px;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+}
