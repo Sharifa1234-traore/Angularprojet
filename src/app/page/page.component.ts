@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./page.component.css']
 })
 export class PageComponent implements OnInit{
-   // title = 'reproductiondepage';
+  //  title = 'reproductiondepage';
   // // titre: string = 'Bienvenue sur myKN';
 
   // titre= {titre:"Bienvenue sur myKN",
