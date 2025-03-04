@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,141 +11,127 @@
   </head>
 
   <body>
-    <header>
-      <nav id="mainNav">
-        <div>
-          <p class="paragraphe">KUEHNE+NAGEL myKn</p>
-          <div class="recherche">
-            <input
-              type="search"
-              id="rechercher"
-              name="search"
-              placeholder="Recherche par référence de suivi"
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="head">
+      <header>
+        <nav id="mainNav">
+          <div class="nav-container">
+            <p class="logo">KUEHNE+NAGEL myKN</p>
+            <div class="recherche">
+              <input
+                type="search"
+                id="rechercher"
+                name="search"
+                placeholder="Recherche par référence de suivi"
+              />
+              <span class="iconRecherche"><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+            <div class="btn-group button">
+              <button type="button" id="connect">Connexion</button>
+              <button type="button" id="inscrit">S'inscrire</button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
           </div>
-        </div>
-        <div class="btn">
-          <button type="submit" id="connect">Connexion</button>
-          <button type="submit" id="inscrit" >S'inscrire</button>
-        </div>
-      </nav>
-    </header>
-
-    <aside id="mainAside">
-      <ul class="liste">
-        <li>
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </li>
-
-        <li>
-          <i class="fa-solid fa-calculator"></i>
-          <span>Quote</span>
-        </li>
-
-        <li>
-          <i class="fa-solid fa-book-open-reader"></i>
-          <span>Book</span>
-        </li>
-
-        <li>
-          <i class="fa-solid fa-magnifying-glass-plus"></i>
-          <span>Track</span>
-        </li>
-
-        <li>
-          <i class="fa-solid fa-binoculars"></i>
-          <span> Explore</span>
-        </li>
-
-        <li>
-          <i class="fa-solid fa-newspaper"></i>
-          <span>News</span>
-        </li>
-
-        <div class="pass">
+        </nav>
+      </header>
+      <!------------------------------------------------------------------------------------------------------------------------------>
+      <aside id="mainAside">
+        <ul class="liste">
+          <li><i class="fa-solid fa-house"></i> <span>Home</span></li>
+          <li><i class="fa-solid fa-calculator"></i> <span>Quote</span></li>
           <li>
-            <i class="fa-solid fa-circle-nodes"></i>
-            <span> Connectivity</span>
+            <i class="fa-solid fa-book-open-reader"></i> <span>Book</span>
           </li>
           <li>
-            <i class="fa-solid fa-question"></i>
-            <span>Help</span>
+            <i class="fa-solid fa-magnifying-glass-plus"></i> <span>Track</span>
           </li>
-        </div>
-      </ul>
-    </aside>
+          <li><i class="fa-solid fa-binoculars"></i> <span>Explore</span></li>
+          <li><i class="fa-solid fa-newspaper"></i> <span>News</span></li>
+        </ul>
+        <ul class="pass">
+          <li>
+            <i class="fa-solid fa-circle-nodes"></i> <span>Connectivity</span>
+          </li>
+          <li><i class="fa-solid fa-question"></i> <span>Help</span></li>
+        </ul>
+      </aside>
+      <!--------------------------------------------------------------------------------------------------------->
 
-    <main id="mainSection">
-      <section class="container">
-        <div class="cont">
-          <div class="textAlt">
-             <h2>Bienvenue sur myKN</h2>
-            <h5>Contrôle complet de vos envois</h5>
-            <p>Trouvez des devis de fret compétitifs, effectuez des réservations instantanées et suivez vos envois avec myKN</p>
-            <!-- <h2>{{ titre.titre}}</h2>
+      <main id="mainSection">
+        <section class="container">
+          <div class="cont">
+            <div class="textAlt">
+              <h2>Bienvenue sur myKN</h2>
+              <h5>Contrôle complet de vos envois</h5>
+              <p>
+                Trouvez des devis de fret compétitifs, effectuez des
+                réservations instantanées et suivez vos envois avec myKN.
+              </p>
+              <!-- <h2>{{ titre.titre}}</h2>
             <h5>{{titre.nom}}</h5>
             <p>{{titre.para}}</p> -->
+            </div>
+            <div class="buttons">
+              <button class="but" type="button" (click)="onConnecter()">
+                Connexion
+              </button>
+              <button class="tape" type="button" (click)="onInscrire()">
+                S'inscrire
+              </button>
+            </div>
           </div>
-          <button class="but" type="submit" (click)="onConnecter()">Connexion</button>
-          <button class="tape" type="submit" (click)="onInscrire()">S'inscrire</button>
-        </div>
-      </section>
-      <div class="all">
-        <div class="content">
-          <div class="one">
+        </section>
+
+        <div class="cards-container">
+          <div class="card">
             <span>Quote</span>
-            <i id="un" class="fa-solid fa-calculator"></i>
+            <i class="fa-solid fa-calculator"></i>
             <p>
               Saisissez simplement les détails de votre itinéraire et de votre
               envoi. Recevez instantanément des devis de frêt aérien, maritime
               et routier compétitifs
             </p>
-            <button type="submit">Commencer un devis</button>
+            <button type="button">Commencer un devis</button>
           </div>
 
-          <div class="two">
+           <div class="card">
             <span>Book</span>
-            <i id="deux" class="fa-solid fa-book-open-reader"></i>
-            <p>
-              Transformez votre devis en réservation. Vous pouvez effectuer une
+            <i class="fa-solid fa-book-open-reader"></i>
+            <p> Transformez votre devis en réservation. Vous pouvez effectuer une
               réservation avec vos devis reçus. Ils sont disponible dans la
-              liste 'Mes devis'.
-            </p>
-            <button type="submit">Commencer une réservation</button>
+              liste 'Mes devis'.</p>
+            <button type="button">Commencer une réservation</button>
           </div>
 
-          <div class="three">
+          <div class="card">
             <span>Track</span>
-            <i id="trois" class="fa-solid fa-magnifying-glass-plus"></i>
-            <p>
-              Localisation des navires en temps réel sur des cartes
-              interactives, notifications proactives sur les évènements
-              importants liés à l'expédition et visibilité accrue.
-            </p>
-            <button type="submit">Débutez gratuitement dès maintenant</button>
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+            <p> Localisation des navires en temps réel sur des cartes interactives,notifications proactives sur
+              les événements importants liés à l'expédition et visibilité accrue.</p>
+            <button type="button">Débutez gratuitement</button>
           </div>
         </div>
-        <div class="span">
-          <p class="info">Vous souhaitez davantage d'informations?</p>
-          <p class="click"><a href="">Cliquez ici</a></p>
-          <p class="savoir">pour en savoir plus sur myKN</p>
-        </div>
-      </div>
-    </main>
 
-    <hr />
-    <footer>
-      <div class="para">
-        <div class="footer">
-          <p>Kuehne-nagel.com</p>
-          <p>Politique de confidentialité</p>
-          <p>Paramètres relatifs aux cookies</p>
+        <div class="info-section">
+          <p class="info">Vous souhaitez davantage d'informations?</p>
+          <p class="click"><a href="#">Cliquez ici</a></p>
+          <p class="savoir">pour en savoir plus sur myKN.</p>
         </div>
-        <p class="dernier">&copy;2025 Kuehne+Nagel</p>
-      </div>
-    </footer>
+      </main>
+
+
+      <hr/>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-p">
+            <p>Kuehne-nagel.com</p>
+            <p>Politique de confidentialité</p>
+            <p>Paramètres relatifs aux cookies</p>
+          </div>
+          <p class="copyright">&copy; 2025 Kuehne+Nagel</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
-
